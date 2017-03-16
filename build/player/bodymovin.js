@@ -7666,10 +7666,11 @@ AnimationItem.prototype.configAnimation = function (animData) {
         animData.assets = animData.assets.concat(animData.comps);
         animData.comps = null;
     }
+    this.assets = this.animationData.assets;
     this.renderer.searchExtraCompositions(animData.assets);
 
     this.layers = this.animationData.layers;
-    this.assets = this.animationData.assets;
+
     this.frameRate = this.animationData.fr;
     this.firstFrame = Math.round(this.animationData.ip);
     this.frameMult = this.animationData.fr / 1000;
